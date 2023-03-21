@@ -1,0 +1,413 @@
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            width: 100%;
+            min-height: 30px;
+            background-color: black;
+            background-position: center;
+            position: fixed;
+            top: 0
+        }
+        
+        nav {
+            display: flex;
+            padding: 10px 2px;
+            justify-content: space-between;
+            align-items: center;
+            text-align: right;
+        }
+        
+        .nav-links {
+            flex: 1;
+            text-align: right;
+        }
+        
+        .nav-links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 10px;
+            position: relative;
+        }
+        
+        .nav-links ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        
+        .nav-links ul li::after {
+            content: "";
+            width: 0%;
+            height: 2px;
+            background: orange;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+        
+        .nav-links ul li:hover:after {
+            width: 80%;
+        }
+        
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        @media(max-width:1100px) {
+            .nav-links ul li {
+                padding: 10px 26px;
+            }
+            .row-img img {
+                height: 200px;
+                width: 200px;
+            }
+        }
+        /*----------------Profile-------------*/
+        
+        .profile {
+            width: 80%;
+            text-align: center;
+            margin: 80px 0 0 100px;
+        }
+        
+        .row-img img {
+            border-radius: 70%;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            color: rgb(119, 119, 218);
+        }
+        
+        h2 {
+            text-align: center;
+            color: rgb(246, 248, 250);
+            margin-top: 60px;
+        }
+        
+        .col {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
+        
+        .object {
+            font-size: 15px;
+        }
+        
+        .info {
+            margin: 20px;
+        }
+        
+        .info li {
+            list-style-type: none;
+        }
+        
+        .info a {
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+        }
+        
+        .info ul {
+            margin-left: 20%;
+            text-align: left;
+            line-height: 40px;
+        }
+        
+        .fa li {
+            line-height: 30px;
+        }
+        
+        @media(max-width:1100px) {
+            .info a {
+                font-size: 17px;
+                color: black;
+            }
+            .fa li {
+                margin-left: -50%;
+                line-height: 30px;
+            }
+        }
+        /*-------------------education----------------*/
+        
+        .education {
+            background-color: rgb(233, 233, 233);
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+        
+        .education-col {
+            height: 400px;
+            width: 200px;
+            background-color: thistle;
+            flex-basis: 32%;
+            border-radius: 10px;
+            margin: 0 10px 10px 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .education p {
+            margin-top: 40%;
+            text-align: center;
+            line-height: 40px;
+            width: 100%;
+            display: block;
+        }
+        
+        .layer {
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+        }
+        
+        .layer:hover {
+            background: orange;
+        }
+        
+        .layer h3 {
+            width: 100%;
+            font-weight: 500;
+            color: rgb(19, 17, 18);
+            font-size: 50px;
+            border-color: orange;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        
+        .layer:hover h3 {
+            bottom: 49%;
+            opacity: 1;
+        }
+        
+        @media(max-width:1100px) {
+            .row {
+                flex-direction: column;
+            }
+            .education-col {
+                margin-left: 20%;
+                height: 400px;
+                width: 210px;
+                background-color: thistle;
+                border-radius: 10px;
+                position: relative;
+                overflow: hidden;
+            }
+            .education p {
+                font-size: 19px;
+                margin-top: 7%;
+                text-align: center;
+                line-height: 40px;
+                width: 100%;
+                display: block;
+            }
+        }
+        /*---------------Skill-------------------*/
+        
+        .skill {
+            background-image: linear-gradient( rgba(208, 211, 223, 0.7), rgba(110, 111, 112, 0.7)), url(skills.png);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            height: 600px;
+            margin: 20px 0 20px 0;
+            text-align: center;
+            padding-top: 100px;
+            z-index: -1;
+        }
+        
+        .skill-box {
+            margin: 0 30px 40px 30px;
+            padding: 27px;
+            flex-basis: 15%;
+            border-radius: 10px;
+            text-align: center;
+            background-color: rgb(255, 189, 9);
+        }
+        
+        .skill-box:hover {
+            box-shadow: 0 0 30px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .skill h1 {
+            color: white;
+            font-size: 30px;
+            margin: 60px 0 30px 0;
+        }
+        
+        @media(max-width:1100px) {
+            .skill-box {
+                margin: 5px 50px 5px 50px;
+                padding: 15px;
+            }
+            .skill-box p {
+                font-size: 13px;
+            }
+        }
+        /*--------------------------project----------------------*/
+        
+        .project {
+            background-color: rgb(223, 222, 223);
+            padding: 80px;
+            z-index: -1;
+        }
+        
+        .col-project {
+            background-color: rgb(126, 126, 126);
+            margin: 10px 0 0 10px;
+            width: 80%;
+            margin-left: 10%;
+            border-radius: 10px;
+            list-style-position: inside;
+        }
+        
+        .col-project h2 {
+            margin: 10px 10px 20px 0;
+        }
+        
+        .col-project ul {
+            margin-left: 20px;
+            line-height: 30px;
+        }
+        
+        .col-project li {
+            color: white;
+        }
+        
+        @media(max-width:1100px) {
+            .col-project {
+                width: 100%;
+                margin-left: 0;
+            }
+            .col-project h2 {
+                font-size: 19px;
+            }
+        }
+        /*-----------------Achivement------------------*/
+        
+        .achivement {
+            background-image: linear-gradient(rgba(208, 211, 223, 0.7), rgba(110, 111, 112, 0.7)), url(achivement.png);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            margin-bottom: 100px;
+            z-index: -1;
+        }
+        
+        .achi-row {
+            flex-basis: 39%;
+            height: 400px;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            margin-left: 84px;
+            margin-right: 69px;
+            background: transparent;
+        }
+        
+        .achi-row h2 {
+            font-size: 30px;
+            color: black;
+        }
+        
+        .achi-row p {
+            margin: 20% 10% 10% 10%;
+            justify-content: center;
+            text-align: center;
+            font-size: 18px;
+        }
+        
+        @media(max-width:1100px) {
+            .achivement {
+                background-size: 399px 964px;
+                background-repeat: no-repeat;
+                margin-bottom: 30px;
+            }
+        }
+        /*----------------Activity-----------------------*/
+        
+        .activity {
+            margin: 0px;
+            z-index: -1;
+        }
+        
+        .row-activity {
+            color: aliceblue;
+            width: 64%;
+            margin: 5% 10% 8% 12%;
+            padding: 80px;
+            text-align: left;
+            font-size: 30px;
+        }
+        
+        .img {
+            height: 500px;
+            background-image: linear-gradient(rgba(69, 69, 71, 0.7), rgba(110, 111, 112, 0.7)), url(activity.png);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            z-index: -1;
+        }
+        
+        .row-activity li {
+            font-size: 19px;
+            margin: 0 0 0 -25px;
+        }
+        /*--------------------Languages------------------------*/
+        
+        .languages {
+            background-image: linear-gradient(to right, #032a3b, #5a5ba1, #7d97b4);
+            margin: 5% 0 5% 5%;
+            width: 90%;
+        }
+        
+        .languages h1 {
+            margin-top: 10px;
+            color: orange;
+        }
+        
+        .lan-col h2 {
+            color: white;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .lan-col {
+            margin: 20px 50px 60px 50px;
+        }
+        
+        @media(max-width:1100px) {
+            .activity h1 {
+                font-size: 22px;
+            }
+            .fa {
+                margin-left: 33%;
+            }
+        }
+        /*--------------------footer----------------------*/
+        
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 10px;
+            width: 90%;
+            margin-left: 5%;
+            padding: 10px;
+        }
